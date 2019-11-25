@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"com/alliander/klic/model/formatter",
 	"com/alliander/klic/service/KLIC.service"
-], function (Controller, JSONModel, formatter, timeSheetService) {
+], function (Controller, JSONModel, formatter, KLICService) {
 	"use strict";
 
 	return Controller.extend("com.alliander.klic.controller.Main", {
@@ -15,14 +15,18 @@ sap.ui.define([
 		},
 
 		initModels: function () {
-			var model = new JSONModel({
+			var localModel = new JSONModel({
 				startDate: new Date(),
-				people: []
+				meldingen: []
 			});
 
-			model.setSizeLimit(10000);
+			KLICService.getMeldingen().then((odata) => {
+				localModel.setProperty("/meldingen", odata);
+			});
 
-			this.getView().setModel(model);
+			localModel.setSizeLimit(10000);
+
+			this.getView().setModel(localModel);
 		}
 	});
 });

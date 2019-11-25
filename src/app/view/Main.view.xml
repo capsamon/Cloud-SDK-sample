@@ -2,7 +2,7 @@
 	displayBlock="true" xmlns="sap.m" xmlns:unified="sap.ui.unified" xmlns:core="sap.ui.core">
 	<App id="idAppControl">
 		<pages>
-			<Page title="KLIC Beheer">
+			<Page title="Alliander KLIC Beheer">
 				<content>
 					<VBox class="sapUiSmallMargin">
 						<Table items="{ path: '/Melding'}" noDataText="Geen meldingen gevonden.." >
