@@ -1,10 +1,10 @@
 sap.ui.define([
   "sap/ui/core/UIComponent",
-  "com/sap/timesheet/model/models"
+  "com/alliander/klic/model/models"
 ], function (UIComponent, models) {
   "use strict";
 
-  return UIComponent.extend("com.sap.timesheet.Component", {
+  return UIComponent.extend("com.alliander.klic.Component", {
     metadata: {
       manifest: "json"
     },

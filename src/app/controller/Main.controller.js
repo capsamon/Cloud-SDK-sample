@@ -5,14 +5,14 @@ sap.ui.define([
 	"sap/m/Popover",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"com/sap/timesheet/model/formatter",
-	"com/sap/timesheet/util/converter",
-	"com/sap/timesheet/util/setBusy",
-	"com/sap/timesheet/service/time-sheet.service"
+	"com/alliander/klic/model/formatter",
+	"com/alliander/klic/util/converter",
+	"com/alliander/klic/util/setBusy",
+	"com/alliander/klic/service/time-sheet.service"
 ], function (Button, Dialog, Label, Popover, Controller, JSONModel, formatter, converter, setBusy, timeSheetService) {
 	"use strict";
 
-	return Controller.extend("com.sap.timesheet.controller.Main", {
+	return Controller.extend("com.alliander.klic.controller.Main", {
 		formatter: formatter,
 
 		onInit: function () {
@@ -308,7 +308,7 @@ sap.ui.define([
 				that.oNewAppointmentDialog = new Dialog({
 					title: "Add a new appointment",
 					content: [
-						sap.ui.xmlfragment("myFrag", "com.sap.timesheet.fragments.Create", this)
+						sap.ui.xmlfragment("myFrag", "com.alliander.klic.fragments.Create", this)
 					],
 					beginButton: new Button({
 						text: "Create",
@@ -378,7 +378,7 @@ sap.ui.define([
 				oInfoInput;
 
 			if (!this._oDetailsPopover) {
-				this._oDetailsPopover = sap.ui.xmlfragment("myPopoverFrag", "com.sap.timesheet.fragments.Details", this);
+				this._oDetailsPopover = sap.ui.xmlfragment("myPopoverFrag", "com.alliander.klic.fragments.Details", this);
 				this.getView().addDependent(this._oDetailsPopover);
 			}
 

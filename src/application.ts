@@ -33,9 +33,9 @@ const setupApp = () => {
 
   // keep srv folder for now, so that serve defaults work and that we can simply copy it over to the deployment folder
   cds
-    .serve("TimesheetService") // by default from srv/
+    .serve("KLICService") // by default from srv/
     .to("odata")
-    .at("odata/v2/TimesheetService")
+    .at("odata/v2/KLICService")
     .with(serviceHandler)
     .in(_app);
 

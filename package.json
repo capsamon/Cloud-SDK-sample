@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "init": "npm i && node initialize.js",
-    "preinstall": "rm -rf node_modules/@sap/cds-services",
+    "preinstall": "del -f node_modules/@sap/cds-services",
     "cds-build": "npx cds build/all --clean",
     "cds-deploy": "npx cds deploy",
     "generate": "npx generate-odata-client -c generator-config.json",

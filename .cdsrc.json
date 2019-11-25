@@ -11,7 +11,7 @@
       "kind": "sqlite",
       "model": "db",
       "credentials": {
-        "database": "db/timesheet.db"
+        "database": "db/klic.db"
       }
     }
   }

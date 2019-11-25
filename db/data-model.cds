@@ -1,31 +1,45 @@
-namespace my.timesheet;
+namespace alliander.KLIC;
 
-entity Appointment {
-  key ID: String;
-  start_date: Date;
-  start_time: Time;
-  end_date: Date;
-  end_time: Time;
-  title: String;
-  project: String;
-  info: String;
-  status: String;
-  type: String;
-  calendar: Association to TeamCalendar;
-  person: Association to Person;
+entity Melding {
+  key ID                    : Integer;
+      klicNummer            : Integer;
+      dataSendToAddress     : String;
+      relatieNummer         : Date;
+      contactNaam           : Time;
+      contactTelefoonnummer : String;
+      contactEmail          : String;
+      referentieMeldingNr   : String;
+      referentieVolgNr      : String;
+      typeMelding           : String;
+      gebiedsPolygoon       : String;
+      locatieStraat         : String;
+      locatieHuisnummer     : String;
+      locatiePostcode       : String;
+      locatiePlaats         : String;
+      aanvraagTimestap      : Timestamp;
 }
 
-entity Person {
-  key ID: String;
-  name: String;
-  role: String;
-  s4ID: String;
-  s4CompanyCode: String;
-  sfsfID: String;
-  appointments: Association to many Appointment on appointments.person = $self;
+entity OrderBevestiging {
+  key ID                     : Integer;
+      klicNummer             : Integer;
+      processVerwerkingsCode : String;
+      severityCode           : String;
+      meldingCode            : String;
+      meldingOmschrijving    : String;
+      orderID                : Integer;
+      klantReferentie        : String;
+      bevestigingTimestamp   : Timestamp;
+      aanvraagTimestamp      : Timestamp;
 }
 
-entity TeamCalendar {
-  key year: Integer;
-  appointments: Association to many Appointment on appointments.calendar = $self;
+entity BetrokkenBeheerders {
+  key ID                         : Integer;
+      klicNummer                 : Integer;
+      processVerwerkingsCode     : String;
+      severityCode               : String;
+      klantReferentie            : String;
+      veiligheidsGebiedBetrokken : String;
+      bevestigingTimestamp       : Timestamp;
+      aanvraagTimestamp          : Timestamp;
+      betrokkenBeheerders        : String; //TODO: <TYPE BEHEERDER>
 }

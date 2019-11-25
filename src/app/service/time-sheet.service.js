@@ -1,6 +1,6 @@
 sap.ui.define([
-  "com/sap/timesheet/service/http",
-  "com/sap/timesheet/util/converter"
+  "com/alliander/klic/service/http",
+  "com/alliander/klic/util/converter"
 ], function (http, converter) {
   "use strict";
 

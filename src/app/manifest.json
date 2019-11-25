@@ -1,7 +1,7 @@
 {
 	"_version": "1.8.0",
 	"sap.app": {
-		"id": "com.sap.timesheet",
+		"id": "com.alliander.klic",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -37,7 +37,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "com.sap.timesheet.view.Main",
+			"viewName": "com.alliander.klic.view.Main",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -56,7 +56,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "com.sap.timesheet.i18n.i18n"
+					"bundleName": "com.alliander.klic.i18n.i18n"
 				}
 			}
 		},
@@ -72,7 +72,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "com.sap.timesheet.view",
+				"viewPath": "com.alliander.klic.view",
 				"controlAggregation": "pages",
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
