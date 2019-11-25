@@ -1,7 +1,7 @@
 import cds from "@sap/cds";
 import express from "express";
 import { resolve } from "path";
-import { serviceHandler } from "./team-calendar-service";
+import { serviceHandler } from "./KLICService";
 
 class App {
   public app: express.Application;

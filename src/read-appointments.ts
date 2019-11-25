@@ -1,7 +1,7 @@
 import { TimeSheetEntry } from "@sap/cloud-sdk-vdm-workforce-timesheet-service";
 import moment from "moment";
 import { EmployeeTime } from "./generated/ec-time-off-service";
-import { Appointment } from "./model/appointment";
+import { Appointment } from "./model/melding";
 import { Person } from "./model/person";
 import { readPersons } from "./read-persons";
 import { transformS4Appointment, transformSfsfAppointment } from "./util/appointment-transformation";
